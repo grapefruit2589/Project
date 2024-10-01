@@ -1,0 +1,42 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/plannerDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="플래너 상세 정보"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3" /> <!-- 세로 중앙보다 약간 위 -->
+
+    <TextView
+        android:id="@+id/plannerDetailsContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="플래너 내용이 여기에 표시됩니다."
+        app:layout_constraintTop_toBottomOf="@id/plannerDetailsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintTop_margin="20dp" />
+
+    <Button
+        android:id="@+id/editPlannerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="플래너 수정"
+        app:layout_constraintTop_toBottomOf="@id/plannerDetailsContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_margin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
