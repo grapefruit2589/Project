@@ -3,29 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#87CEFA"
     android:padding="16dp">
 
-    <!-- 최근 플래너 텍스트 -->
     <TextView
-        android:id="@+id/recentPlannerTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="불러온 플래너"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- RecyclerView to display saved planners -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/selectCompleteButton"
+        android:id="@+id/savedPlannerTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="선택 완료"
-        android:layout_marginTop="200dp"/>
-
+        android:text="저장된 플래너가 여기에 표시됩니다."
+        android:padding="16dp"/>
 </LinearLayout>

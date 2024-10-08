@@ -2,12 +2,11 @@ package com.example.travelplanner
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.travelplanner.databinding.ActivityFifthBinding
-import com.example.travelplanner.R
 import com.opencsv.CSVReader
 import java.io.InputStreamReader
+
 
 
 class FifthActivity : AppCompatActivity() {
@@ -22,13 +21,19 @@ class FifthActivity : AppCompatActivity() {
         // CSV 파일을 읽고 형식화된 데이터를 TextView에 설정
         val csvData = readCSVFromRawResource()
         val formattedCSVData = formatCSVData(csvData)
-        //val top10Lines = formattedCSVData.lines().take(10).joinToString("\n")
         val top10Lines = formattedCSVData.lines().take(2).joinToString("\n") {
-            it.take(100) // 각 줄에서 최대 100자까지만 가져오기 (필요에 따라 조정 가능)
+            it.take(100) // 각 줄에서 최대 100자까지만 가져오기
         }
 
-        //binding.textView.text = formattedCSVData // TextView에 출력
-        binding.recommendationItem3.text = top10Lines //formattedCSVData
+        binding.recommendationItem3.text = top10Lines // 추천 텍스트 출력
+
+        // 플래너 생성 버튼 클릭 리스너
+        binding.createPlannerButton.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java).apply {
+                putExtra("RECOMMENDATIONS", top10Lines) // 추천 텍스트를 Intent에 추가
+            }
+            startActivity(intent)
+        }
     }
 
     // CSV 파일을 읽어서 2차원 배열로 반환
@@ -58,17 +63,3 @@ class FifthActivity : AppCompatActivity() {
     }
 }
 
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fifth)
-
-        // Assuming there will be a RecyclerView to show recommendations
-        // and a button for creating the planner
-        val createPlannerButton = findViewById<Button>(R.id.createPlannerButton)
-        createPlannerButton.setOnClickListener {
-            val intent = Intent(this, SixthActivity::class.java)
-            startActivity(intent)
-        }
-    }
-    }
-    */

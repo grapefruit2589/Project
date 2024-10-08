@@ -3,31 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:background="#87CEFA"
+    android:padding="16dp">
 
-    <!-- 플래너 정보가 표시될 텍스트뷰 (더미 텍스트) -->
     <TextView
-        android:id="@+id/plannerInfo"
-        android:layout_width="wrap_content"
+        android:id="@+id/recommendationsTextView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="플래너 정보가 여기에 표시됩니다."
-        android:textSize="20sp"
-        android:layout_marginBottom="20dp" />
+        android:text="추천 텍스트가 여기에 표시됩니다."
+        android:padding="16dp"/>
 
-    <!-- 플래너 저장하기 버튼 -->
     <Button
         android:id="@+id/savePlannerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="플래너 저장하기"
-        android:layout_marginBottom="10dp" />
+        android:text="플래너 저장하기"/>
 
-    <!-- 플래너 수정하기 버튼 -->
     <Button
         android:id="@+id/modifyPlannerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="플래너 수정하기" />
-
+        android:text="플래너 수정하기"/>
 </LinearLayout>

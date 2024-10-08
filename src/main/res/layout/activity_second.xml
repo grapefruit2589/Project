@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#87CEFA">
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:layout_marginBottom="20dp" />
 
     <Button
-        android:id="@+id/newPlannerButton"
+        android:id="@+id/createNewPlannerButton"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:text="새 플래너 생성하기"

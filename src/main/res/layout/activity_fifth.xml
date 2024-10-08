@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Dummy text to simulate recommendations -->
+            <!-- Title for recommendations -->
             <TextView
                 android:id="@+id/recommendationTitle"
                 android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- List of recommendations (replace with dynamic content) -->
+            <!-- Example recommendation items -->
             <TextView
                 android:id="@+id/recommendationItem1"
                 android:layout_width="wrap_content"
@@ -42,32 +42,33 @@
                 android:text="추천 숙박업소 1: 제주 호텔 A"
                 android:layout_marginBottom="16dp"/>
 
+            <!-- Placeholder for dynamic content -->
             <TextView
                 android:id="@+id/recommendationItem3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="더 많은 추천 항목..."
                 android:textSize="18sp"
                 android:textStyle="normal"
                 android:gravity="start"
                 android:layout_marginBottom="16dp"
                 android:padding="8dp"
-                android:inputType="textMultiLine"
                 android:maxLines="20"
                 android:scrollbars="vertical"
-                android:ellipsize="end"
                 android:textColor="#000000" />
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Button for creating planner -->
+    <!-- Button to create planner -->
     <Button
         android:id="@+id/createPlannerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="플래너 생성"
         android:layout_marginTop="16dp"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
 
 </LinearLayout>
