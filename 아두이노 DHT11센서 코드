@@ -1,6 +1,7 @@
-//아두이노 DHT11 센서 사용법 1.아두이노 IDE라이브러리 버튼 클릭 2.검색창에 DHT sensor library검색 3.라이브러리 다운로드
-
+//아두이노 IDE라이브러리인 "DHT sensor library"다운로드
+//아두이노 보드 연결
 #include "DHT.h"
+//DHT sensor library 속 헤더파일인 DHT.h 인클루드
 
 #define DHTPIN A0      // DHT11 센서의 데이터 핀 연결 핀 번호
 #define DHTTYPE DHT11  // DHT11 사용
@@ -12,7 +13,7 @@ void setup() {
   dht.begin();
 }
 
-void loop() {
+void loop() {//온습도 데이터 반복 출력
   // 온도 및 습도 데이터를 읽음
   float h = dht.readHumidity();
   float t = dht.readTemperature();
