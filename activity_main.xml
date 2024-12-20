@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87CEEB"> <!-- 연한 하늘색 배경 -->
+
+    <!-- 블루투스 데이터 전송 버튼 -->
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="블루투스 데이터 전송"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#1E90FF"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp" />
+
+    <!-- 프래그먼트를 표시할 영역 -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_view" />
+
+    <!-- 하단 네비게이션 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

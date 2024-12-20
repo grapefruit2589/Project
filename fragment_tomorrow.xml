@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#87CEEB">
+
+    <!-- 상단 제목 -->
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내일 예상 온도 및 강수 여부"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="128dp" />
+
+    <!-- 예상 온도 표시 -->
+    <TextView
+        android:id="@+id/tempTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예상 온도: --°C"
+        android:textSize="32sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 강수 확률 표시 -->
+    <TextView
+        android:id="@+id/rainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="강수 여부: --"
+        android:textSize="32sp" />
+</LinearLayout>

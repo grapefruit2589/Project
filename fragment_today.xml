@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#87CEEB">
+
+    <!-- 상단 제목 -->
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 온도 및 습도"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="128dp"
+        />
+
+    <!-- 현재 시각 표시 -->
+    <TextView
+        android:id="@+id/currentTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 시각: --:--"
+        android:textSize="28sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 온도 표시 -->
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 온도: --°C"
+        android:textSize="32sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 습도 표시 -->
+    <TextView
+        android:id="@+id/humidityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 습도 --°C"
+        android:textSize="32sp" />
+</LinearLayout>
